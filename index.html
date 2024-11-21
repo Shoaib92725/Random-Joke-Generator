@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke-Generator</title>
+    <style>
+      /* General body styling */
+      body {
+        font-family: Arial, sans-serif; /* Make the text more readable */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4; /* Light background color for the page */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Full height for centering content vertically */
+      }
+
+      /* Main container styling */
+      #temp {
+        background-color: rgb(129,124,124); /* Background color of the joke container */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px; /* Prevents it from getting too wide on large screens */
+        text-align: center;
+      }
+
+      /* Heading styling */
+      h1 {
+        font-size: 1.8em;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      /* Button styling */
+      button {
+        cursor: pointer;
+        background-color: #4caf50; /* Green background */
+        color: white;
+        font-size: 1.2em;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button hover effect */
+      button:hover {
+        background-color: #45a049; /* Darker green when hovered */
+      }
+
+      /* Bucket (where jokes appear) styling */
+      #bucket {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: papayawhip;
+        font-size: 1.3em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        min-height: 40px;
+        line-height: 1.5;
+        word-wrap: break-word; /* To handle long words in the bucket */
+        text-align: center;
+      }
+
+      /* Media Queries for Responsiveness */
+
+      /* For smaller screens (mobile devices) */
+      @media screen and (max-width: 600px) {
+        #temp {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        button {
+          font-size: 1.1em;
+          padding: 10px 20px;
+        }
+
+        #bucket {
+          font-size: 1.2em;
+        }
+      }
+
+      /* For medium-sized screens (tablets) */
+      @media screen and (max-width: 768px) {
+        #temp {
+          max-width: 90%; /* Let the container take up 90% of the width on tablets */
+          padding: 25px;
+        }
+
+        h1 {
+          font-size: 1.6em;
+        }
+
+        button {
+          font-size: 1.15em;
+          padding: 11px 22px;
+        }
+
+        #bucket {
+          font-size: 1.25em;
+        }
+      }
+
+      /* For larger screens (desktops and larger tablets) */
+      @media screen and (min-width: 769px) {
+        #temp {
+          max-width: 400px;
+          padding: 30px;
+        }
+
+        h1 {
+          font-size: 1.8em;
+        }
+
+        button {
+          font-size: 1.2em;
+          padding: 12px 24px;
+        }
+
+        #bucket {
+          font-size: 1.3em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="temp">
+      <h1>Random Joke-Generator (Chucknorris)</h1>
+      <button type="submit">Generate A New Joke</button><br /><br />
+      <div id="bucket">Loading...Jokes</div>
+    </div>
+
+    <script src="sandbox.js"></script>
+  </body>
+</html>
